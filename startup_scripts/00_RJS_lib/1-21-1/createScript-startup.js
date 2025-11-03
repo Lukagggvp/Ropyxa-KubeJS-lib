@@ -1,6 +1,6 @@
-//version 0.3-1.21.1-startup
+//version 0.4-1.21.1-startup
 //---changelog---
-//moved server scripts to startup script for 1.21.1 compatibility
+//added mixing
 
 StartupEvents.postInit(e => {
 	let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -14,6 +14,17 @@ StartupEvents.postInit(e => {
 global.createCompacting = function(output, input, heat) {
 	let recipe = {
 		type: 'create:compacting',
+		heatRequirement: heat || 'none',
+		ingredients: global.ISarrayInput(input),
+		results: global.ISarrayOutput(output)
+	};
+
+	return recipe;
+};
+
+global.createMixing = function(output, input, heat) {
+	let recipe = {
+		type: 'create:mixing',
 		heatRequirement: heat || 'none',
 		ingredients: global.ISarrayInput(input),
 		results: global.ISarrayOutput(output)
