@@ -1,7 +1,7 @@
 //version 0.1-1.19.2-server
 //---changelog---
 //initial version, added compacting
-global.compacting = function(output, input, id, heat, e) {
+global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
 	e.custom({
