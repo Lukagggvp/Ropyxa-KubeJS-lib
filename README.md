@@ -5,6 +5,7 @@ Lib of useful functions for kubejs, just download and use!
 
 ## Supported version
 1.16.5/1.18.2/1.19.2/1.20.1 Forge:✔️
+
 1.21.1 NeoForge:✔️
 
 ## Some syntax change
