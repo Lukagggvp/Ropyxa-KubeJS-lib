@@ -3,6 +3,10 @@ Lib of useful functions for kubejs, just download and use!
 
 **IN kubejs/config/common.properties enable disableClassFilter!!!**
 
+## Supported version
+1.16.5/1.18.2/1.19.2/1.20.1 Forge:✔️
+1.21.1 NeoForge:✔️
+
 ## Some syntax change
 ### Supported
 **Items**
@@ -23,7 +27,7 @@ Any nbt
 
 <img src=".github/mysterious_conversion.png" alt="Mysterious Conversion" width="520"/>
 
-**Compacting** 1.16.5:❌ 1.18.2:❌ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+**Compacting** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
 
 <img src=".github/compacting1.png" alt="Compacting" width="520"/>
 
