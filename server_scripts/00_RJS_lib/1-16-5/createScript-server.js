@@ -1,6 +1,6 @@
-//version 0.1-1.16-5-server
+//version 0.2-1.16-5-server
 //---changelog---
-//initial version, added compacting
+//added mixing
 global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
@@ -12,7 +12,17 @@ global.createCompacting = function(output, input, id, heat, e) {
 	}).id(id);
 };
 
+global.createMixing = function(output, input, id, heat, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:mixing',
+		heatRequirement: heat || 'none',
+		ingredients: global.ISarrayInput(input),
+		results: global.ISarrayOutput(output)
+	}).id(id);
+};
+
 onEvent('recipes', e => {
 	global.TrueEvent = e;
 })
-
