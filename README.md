@@ -15,3 +15,6 @@ Lib of useful functions for kubejs, just download and use!
 Item.of() FLuid.of()
 
 Any nbt
+
+
+## Supported recipe type
