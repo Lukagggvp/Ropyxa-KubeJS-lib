@@ -33,3 +33,9 @@ Any nbt
 <img src=".github/compacting1.png" alt="Compacting" width="520"/>
 
 <img src=".github/compacting2.png" alt="Compacting" width="520"/>
+
+**Mixing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/mixing1.png" alt="Mixing" width="520"/>
+
+<img src=".github/mixing2.png" alt="Mixing" width="520"/>
