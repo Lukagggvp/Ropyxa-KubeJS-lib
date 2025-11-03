@@ -21,3 +21,6 @@ Any nbt
 ### Create
 **Mysterious Conversion** 1.16.5:❌ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️
 <img src=".github/mysterious_conversion.png" alt="Mysterious Conversion" width="520"/>
+
+**Compacting** 1.16.5:❌ 1.18.2:❌ 1.19.2:✔️ 1.20.1:❌ 1.21.1:❌️
+<img src=".github/mysterious_conversion.png" alt="Mysterious Conversion" width="520"/>
