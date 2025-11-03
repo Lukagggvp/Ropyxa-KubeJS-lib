@@ -6,7 +6,7 @@ StartupEvents.postInit(e => {
 	let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory');
 	let $ConversionRecipe = Java.loadClass('com.simibubi.create.compat.jei.ConversionRecipe');
 
-	global.mysteriousConversion = function (input, output) {
+	global.createMysteriousConversion = function (input, output) {
 		$MysteriousItemConversionCategory.RECIPES.add($ConversionRecipe.create(input, output));
 		return this;
 	};
