@@ -1,6 +1,6 @@
-//version 0.4-1.21.1-startup
+//version 0.5-1.21.1-startup
 //---changelog---
-//added mixing
+//updated ISarrayInput and ISarrayOutput, added cutting
 
 StartupEvents.postInit(e => {
 	let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -15,8 +15,8 @@ global.createCompacting = function(output, input, heat) {
 	let recipe = {
 		type: 'create:compacting',
 		heatRequirement: heat || 'none',
-		ingredients: global.ISarrayInput(input),
-		results: global.ISarrayOutput(output)
+		ingredients: global.ISarrayInput_many_fluid_tag(input),
+		results: global.ISarrayOutput_many_fluid(output)
 	};
 
 	return recipe;
@@ -26,8 +26,19 @@ global.createMixing = function(output, input, heat) {
 	let recipe = {
 		type: 'create:mixing',
 		heatRequirement: heat || 'none',
-		ingredients: global.ISarrayInput(input),
-		results: global.ISarrayOutput(output)
+		ingredients: global.ISarrayInput_many_fluid_tag(input),
+		results: global.ISarrayOutput_many_fluid(output)
+	};
+
+	return recipe;
+};
+
+global.createCutting = function(output, input, time) {
+	let recipe = {
+		type: 'create:cutting',
+		ingredients: global.ISarrayInput_many_tag(input),
+		processingTime: time || 100,
+		results: global.ISarrayOutput_many_chance(output)
 	};
 
 	return recipe;
