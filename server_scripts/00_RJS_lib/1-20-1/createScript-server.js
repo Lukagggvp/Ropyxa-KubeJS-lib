@@ -1,14 +1,14 @@
-//version 0.2-1.20.1-server
+//version 0.3-1.20.1-server
 //---changelog---
-//added mixing
+//updated ISarrayInput and ISarrayOutput, added cutting
 global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
 	e.custom({
 		type: 'create:compacting',
 		heatRequirement: heat || 'none',
-		ingredients: global.ISarrayInput(input),
-		results: global.ISarrayOutput(output)
+		ingredients: global.ISarrayInput_many_fluid_tag(input),
+		results: global.ISarrayOutput_many_fluid(output)
 	}).id(id);
 };
 
@@ -18,8 +18,19 @@ global.createMixing = function(output, input, id, heat, e) {
 	e.custom({
 		type: 'create:mixing',
 		heatRequirement: heat || 'none',
-		ingredients: global.ISarrayInput(input),
-		results: global.ISarrayOutput(output)
+		ingredients: global.ISarrayInput_many_fluid_tag(input),
+		results: global.ISarrayOutput_many_fluid(output)
+	}).id(id);
+};
+
+global.createCutting = function(output, input, id, time, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:cutting',
+		ingredients: global.ISarrayInput_many_tag(input),
+		processingTime: time || 100,
+		results: global.ISarrayOutput_many_chance(output)
 	}).id(id);
 };
 
