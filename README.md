@@ -39,3 +39,9 @@ Any nbt
 <img src=".github/mixing1.png" alt="Mixing" width="520"/>
 
 <img src=".github/mixing2.png" alt="Mixing" width="520"/>
+
+**Cutting** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/cutting1.png" alt="Cutting" width="520"/>
+
+<img src=".github/cutting2.png" alt="Cutting" width="520"/>
