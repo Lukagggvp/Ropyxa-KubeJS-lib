@@ -24,4 +24,17 @@ ServerEvents.recipes(e => {
 		'rjs_lib:mixing/some_trash2',
 		'heated'
 	);
+
+	global.createCutting(
+		['100% 10x minecraft:stone', '50% 5x minecraft:sand', 'minecraft:dirt'],
+		'#minecraft:dirt',
+		'rjs_lib:cutting/some_trash'
+	);
+
+	global.createCutting(
+		'10% 4x minecraft:snowball',
+		'minecraft:ice',
+		'rjs_lib:cutting/some_trash2',
+		400
+	);
 });
