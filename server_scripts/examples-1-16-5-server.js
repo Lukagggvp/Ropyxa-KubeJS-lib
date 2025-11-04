@@ -27,7 +27,7 @@ onEvent('recipes', e => {
 
 	global.createCutting(
 		['100% 10x minecraft:stone', '50% 5x minecraft:sand', 'minecraft:dirt'],
-		'#minecraft:dirt',
+		'minecraft:dirt',
 		'rjs_lib:cutting/some_trash'
 	);
 
@@ -37,4 +37,5 @@ onEvent('recipes', e => {
 		'rjs_lib:cutting/some_trash2',
 		400
 	);
+
 });
