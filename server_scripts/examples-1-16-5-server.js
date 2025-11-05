@@ -38,4 +38,40 @@ onEvent('recipes', e => {
 		400
 	);
 
+	global.createFilling(
+		'minecraft:snow_block',
+		['1000x &minecraft:water', 'minecraft:snowball'],
+		'rjs_lib:filling/some_trash'
+	);
+
+	global.createFilling(
+		'minecraft:magma_block',
+		['#forge:stone', '100x &minecraft:lava'],
+		'rjs_lib:filling/some_trash2'
+	);
+
+	global.createEmptying(
+		['minecraft:slime_ball', '25x &minecraft:lava'],
+		'minecraft:magma_cream',
+		'rjs_lib:emptying/some_trash'
+	);
+
+	global.createEmptying(
+		['create:blaze_cake_base', '250x &minecraft:lava'],
+		'create:blaze_cake',
+		'rjs_lib:emptying/some_trash2'
+	);
+
+	global.createDeploying(
+		'create:blaze_burner',
+		['create:empty_blaze_burner', 'minecraft:blaze_spawn_egg'],
+		'rjs_lib:deploying/some_trash'
+	);
+
+	global.createDeploying(
+		'minecraft:grass_block',
+		['minecraft:dirt', 'minecraft:tall_grass'],
+		'rjs_lib:deploying/some_trash2',
+		true
+	);
 });
