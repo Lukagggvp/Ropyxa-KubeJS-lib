@@ -1,6 +1,6 @@
-//version 0.5-1.21.1-startup
+//version 0.6-1.21.1-startup
 //---changelog---
-//updated ISarrayInput and ISarrayOutput, added cutting
+//added filling, emptying, deploying
 
 StartupEvents.postInit(e => {
 	let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -39,6 +39,37 @@ global.createCutting = function(output, input, time) {
 		ingredients: global.ISarrayInput_many_tag(input),
 		processingTime: time || 100,
 		results: global.ISarrayOutput_many_chance(output)
+	};
+
+	return recipe;
+};
+
+global.createFilling = function(output, input) {
+	let recipe = {
+		type: 'create:filling',
+		ingredients: global.ISarrayInput_many_fluid_tag(input),
+		results: global.ISarrayOutput_many(output)
+	};
+
+	return recipe;
+};
+
+global.createEmptying = function(output, input) {
+	let recipe = {
+		type: 'create:emptying',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_fluid(output)
+	};
+
+	return recipe;
+};
+
+global.createDeploying = function(output, input, keep_item) {
+	let recipe = {
+		type: 'create:deploying',
+		ingredients: global.ISarrayInput_many_tag(input),
+		keepHeldItem: keep_item || false,
+		results: global.ISarrayOutput_many(output)
 	};
 
 	return recipe;

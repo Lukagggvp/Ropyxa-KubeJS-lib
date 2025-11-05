@@ -33,4 +33,35 @@ ServerEvents.recipes(e => {
 		'minecraft:ice',
 		400
 	)).id('rjs_lib:cutting/some_trash2');
+
+	e.custom(global.createFilling(
+		'minecraft:snow_block',
+		['1000x &minecraft:water', 'minecraft:snowball']
+	)).id('rjs_lib:filling/some_trash');
+
+	e.custom(global.createFilling(
+		'minecraft:magma_block',
+		['#c:stones', '100x &minecraft:lava']
+	)).id('rjs_lib:filling/some_trash2');
+
+	e.custom(global.createEmptying(
+		['minecraft:slime_ball', '25x &minecraft:lava'],
+		'minecraft:magma_cream'
+	)).id('rjs_lib:emptying/some_trash');
+
+	e.custom(global.createEmptying(
+		['create:blaze_cake_base', '250x &minecraft:lava'],
+		'create:blaze_cake'
+	)).id('rjs_lib:emptying/some_trash2');
+
+	e.custom(global.createDeploying(
+		'create:blaze_burner',
+		['create:empty_blaze_burner', 'minecraft:blaze_spawn_egg']
+	)).id('rjs_lib:deploying/some_trash');
+
+	e.custom(global.createDeploying(
+		'minecraft:grass_block',
+		['minecraft:dirt', 'minecraft:tall_grass'],
+		true
+	)).id('rjs_lib:deploying/some_trash2');
 });
