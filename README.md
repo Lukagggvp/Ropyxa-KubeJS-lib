@@ -45,3 +45,21 @@ Any nbt
 <img src=".github/cutting1.png" alt="Cutting" width="520"/>
 
 <img src=".github/cutting2.png" alt="Cutting" width="520"/>
+
+**Filling** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/filling1.png" alt="Filling" width="520"/>
+
+<img src=".github/filling2.png" alt="Filling" width="520"/>
+
+**Emptying** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/emptying1.png" alt="Emptying" width="520"/>
+
+<img src=".github/emptying2.png" alt="Emptying" width="520"/>
+
+**Deploying** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/deploying1.png" alt="Deploying" width="520"/>
+
+<img src=".github/deploying2.png" alt="Deploying" width="520"/>
