@@ -74,4 +74,35 @@ onEvent('recipes', e => {
 		'rjs_lib:deploying/some_trash2',
 		true
 	);
+
+	global.createHaunting(
+		'minecraft:nether_wart',
+		'#minecraft:saplings',
+		'rjs_lib:haunting/some_trash'
+	);
+
+	global.createHaunting(
+		['25% create:blaze_cake_base', '75% 2x minecraft:wheat'],
+		'minecraft:cake',
+		'rjs_lib:haunting/some_trash2'
+	);
+
+	global.createSplashing(
+		['minecraft:diamond', '10% minecraft:cobblestone', '1% minecraft:ancient_debris'],
+		'minecraft:diamond_ore',
+		'rjs_lib:splashing/some_trash'
+	);
+
+	global.createMilling(
+		['3x minecraft:blaze_powder', '12x minecraft:iron_nugget', '25% 6x minecraft:iron_nugget', '1% create:cinder_flour'],
+		'create:blaze_burner',
+		'rjs_lib:milling/some_trash'
+	);
+
+	global.createCrushing(
+		['9x create:crushed_raw_iron', '99% 9x create:crushed_raw_zinc'],
+		'create:crushing_wheel',
+		'rjs_lib:crushing/some_trash',
+		1000
+	);
 });

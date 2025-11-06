@@ -1,6 +1,6 @@
-//version 0.4-1.18.2-server
+//version 0.5-1.18.2-server
 //---changelog---
-//added filling, emptying, deploying
+//added haunting, splashing, milling, crushing
 global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
@@ -65,6 +65,46 @@ global.createDeploying = function(output, input, id, keep_item, e) {
 	}).id(id);
 };
 
+global.createHaunting = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:haunting',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createSplashing = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:splashing',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createMilling = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:milling',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createCrushing = function(output, input, id, time, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:crushing',
+		ingredients: global.ISarrayInput_many_tag(input),
+		processingTime: time || 100,
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
 
 onEvent('recipes', e => {
 	global.TrueEvent = e;
