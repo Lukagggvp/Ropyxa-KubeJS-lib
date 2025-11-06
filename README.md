@@ -1,8 +1,6 @@
 # Ropyxa-KubeJS-lib
 Lib of useful functions for kubejs, just download and use!
 
-[Supported mods](.github/RJS.xlsx)
-
 **IN kubejs/config/common.properties enable disableClassFilter!!!**
 
 ## Supported version
