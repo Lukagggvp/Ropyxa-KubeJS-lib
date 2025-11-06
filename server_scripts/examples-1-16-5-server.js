@@ -74,4 +74,23 @@ onEvent('recipes', e => {
 		'rjs_lib:deploying/some_trash2',
 		true
 	);
+
+	global.createSplashing(
+		['minecraft:diamond', '10% minecraft:cobblestone', '1% minecraft:ancient_debris'],
+		'minecraft:diamond_ore',
+		'rjs_lib:splashing/some_trash'
+	);
+
+	global.createMilling(
+		['3x minecraft:blaze_powder', '12x minecraft:iron_nugget', '25% 6x minecraft:iron_nugget', '1% create:cinder_flour'],
+		'create:blaze_burner',
+		'rjs_lib:milling/some_trash'
+	);
+
+	global.createCrushing(
+		['9x create:crushed_iron_ore', '99% 9x create:crushed_zinc_ore'],
+		'create:crushing_wheel',
+		'rjs_lib:crushing/some_trash',
+		1000
+	);
 });
