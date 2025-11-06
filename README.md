@@ -63,3 +63,21 @@ Any nbt
 <img src=".github/deploying1.png" alt="Deploying" width="520"/>
 
 <img src=".github/deploying2.png" alt="Deploying" width="520"/>
+
+**Haunting** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/haunting1.png" alt="Haunting" width="520"/>
+
+<img src=".github/haunting2.png" alt="Haunting" width="520"/>
+
+**Splashing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/plashing1.png" alt="Splashing" width="520"/>
+
+**Milling** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/milling1.png" alt="Milling" width="520"/>
+
+**Crushing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/crushing1.png" alt="Crushing" width="520"/>
