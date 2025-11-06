@@ -67,7 +67,7 @@ Any nbt
 
 <img src=".github/deploying2.png" alt="Deploying" width="520"/>
 
-**Haunting** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+**Haunting** 1.16.5:❌ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
 
 <img src=".github/haunting1.png" alt="Haunting" width="520"/>
 
