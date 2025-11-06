@@ -64,4 +64,30 @@ ServerEvents.recipes(e => {
 		['minecraft:dirt', 'minecraft:tall_grass'],
 		true
 	)).id('rjs_lib:deploying/some_trash2');
+
+	e.custom(global.createHaunting(
+		'minecraft:nether_wart',
+		'#minecraft:saplings'
+	)).id('rjs_lib:haunting/some_trash');
+
+	e.custom(global.createHaunting(
+		['25% create:blaze_cake_base', '75% 2x minecraft:wheat'],
+		'minecraft:cake'
+	)).id('rjs_lib:haunting/some_trash2');
+
+	e.custom(global.createSplashing(
+		['minecraft:diamond', '10% minecraft:cobblestone', '1% minecraft:ancient_debris'],
+		'minecraft:diamond_ore'
+	)).id('rjs_lib:splashing/some_trash');
+
+	e.custom(global.createMilling(
+		['3x minecraft:blaze_powder', '12x minecraft:iron_nugget', '25% 6x minecraft:iron_nugget', '1% create:cinder_flour'],
+		'create:blaze_burner'
+	)).id('rjs_lib:milling/some_trash');
+
+	e.custom(global.createCrushing(
+		['9x create:crushed_raw_iron', '99% 9x create:crushed_raw_zinc'],
+		'create:crushing_wheel',
+		1000
+	)).id('rjs_lib:crushing/some_trash');
 });

@@ -1,6 +1,6 @@
-//version 0.6-1.21.1-startup
+//version 0.7-1.21.1-startup
 //---changelog---
-//added filling, emptying, deploying
+//added haunting, splashing, milling, crushing
 
 StartupEvents.postInit(e => {
 	let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
@@ -70,6 +70,47 @@ global.createDeploying = function(output, input, keep_item) {
 		ingredients: global.ISarrayInput_many_tag(input),
 		keepHeldItem: keep_item || false,
 		results: global.ISarrayOutput_many(output)
+	};
+
+	return recipe;
+};
+
+global.createHaunting = function(output, input) {
+	let recipe = {
+		type: 'create:haunting',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	};
+
+	return recipe;
+};
+
+global.createSplashing = function(output, input) {
+	let recipe = {
+		type: 'create:splashing',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	};
+
+	return recipe;
+};
+
+global.createMilling = function(output, input) {
+	let recipe = {
+		type: 'create:milling',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	};
+
+	return recipe;
+};
+
+global.createCrushing = function(output, input, time) {
+	let recipe = {
+		type: 'create:crushing',
+		ingredients: global.ISarrayInput_many_tag(input),
+		processingTime: time || 100,
+		results: global.ISarrayOutput_many_chance(output)
 	};
 
 	return recipe;
