@@ -72,7 +72,7 @@ Any nbt
 
 **Splashing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
 
-<img src=".github/plashing1.png" alt="Splashing" width="520"/>
+<img src=".github/slashing1.png" alt="Splashing" width="520"/>
 
 **Milling** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
 
