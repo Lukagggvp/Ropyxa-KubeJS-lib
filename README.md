@@ -17,7 +17,7 @@ Lib of useful functions for kubejs, just download and use!
 '&mod:fluid_anything' '9x &mod:fluid_anything' (9mb) '&#tag:fluid_anything' '9x &#tag:fluid_anything' (9mb)
 
 **Procent** (where it supported)
-'%50 mod:anything' '%50 #tag:tag_anything' '%50 9x mod:anything' '%50 9x #tag:tag_anything' 
+'50% mod:anything' '50% #tag:tag_anything' '50% 9x mod:anything' '50% 9x #tag:tag_anything' 
 
 ### Not supported
 Item.of() FLuid.of()
