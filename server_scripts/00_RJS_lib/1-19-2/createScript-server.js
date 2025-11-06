@@ -1,6 +1,6 @@
 //version 0.5-1.19.2-server
 //---changelog---
-//added haunting, washing, milling, crushing
+//added haunting, splashing, milling, crushing
 global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
