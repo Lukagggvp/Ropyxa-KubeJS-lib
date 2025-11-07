@@ -84,3 +84,15 @@ Any nbt
 **Crushing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
 
 <img src=".github/crushing1.png" alt="Crushing" width="520"/>
+
+**Item Application** 1.16.5:❌ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/item_application1.png" alt="Item Application" width="520"/>
+
+**Pressing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/pressing1.png" alt="Pressing" width="520"/>
+
+**Sandpaper Polishing** 1.16.5:✔️ 1.18.2:✔️ 1.19.2:✔️ 1.20.1:✔️ 1.21.1:✔️️
+
+<img src=".github/sandpaper_polishing1.png" alt="Sandpaper Polishing" width="520"/>
