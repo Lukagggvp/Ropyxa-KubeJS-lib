@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
 	e.custom(global.createCompacting(
-		['10x &minecraft:water', '5x minecraft:sand', '100x &create:honey'],
+		['10x &minecraft:water', '25% 5x minecraft:sand', '100x &create:honey'],
 		['&#c:milk', '9x minecraft:charcoal'],
 		'heated'
 	)).id('rjs_lib:compacting/some_trash');
@@ -12,7 +12,7 @@ ServerEvents.recipes(e => {
 	)).id('rjs_lib:compacting/water_from_ice');
 
 	e.custom(global.createMixing(
-		['10x &minecraft:water', '5x minecraft:sand', '100x &create:honey'],
+		['10x &minecraft:water', '25% 5x minecraft:sand', '100x &create:honey'],
 		['&#c:milk', '9x minecraft:charcoal'],
 		'heated'
 	)).id('rjs_lib:mixing/some_trash');
@@ -60,7 +60,7 @@ ServerEvents.recipes(e => {
 	)).id('rjs_lib:deploying/some_trash');
 
 	e.custom(global.createDeploying(
-		'minecraft:grass_block',
+		'99% minecraft:grass_block',
 		['minecraft:dirt', 'minecraft:tall_grass'],
 		true
 	)).id('rjs_lib:deploying/some_trash2');
@@ -90,4 +90,19 @@ ServerEvents.recipes(e => {
 		'create:crushing_wheel',
 		1000
 	)).id('rjs_lib:crushing/some_trash');
+
+	e.custom(global.createItemApplication(
+		'10% minecraft:crying_obsidian',
+		['minecraft:obsidian', 'minecraft:lingering_potion'],
+	)).id('rjs_lib:item_application/some_trash');
+
+	e.custom(global.createPressing(
+		['10% minecraft:egg', '2x minecraft:feather'],
+		'minecraft:chicken_spawn_egg',
+	)).id('rjs_lib:pressing/some_trash');
+
+	e.custom(global.createSandpaperPolishing(
+		'1% 64x create:experience_nugget',
+		'minecraft:nether_star'
+	)).id('rjs_lib:sandpaper_polishing/some_trash');
 });
