@@ -1,6 +1,6 @@
 onEvent('recipes', e => {
 	global.createCompacting(
-		['10x &minecraft:water', '5x minecraft:sand', '100x &create:honey'],
+		['10x &minecraft:water', '25% 5x minecraft:sand', '100x &create:honey'],
 		['&#forge:milk', '9x minecraft:charcoal'],
 		'rjs_lib:compacting/some_trash'
 	);
@@ -13,7 +13,7 @@ onEvent('recipes', e => {
 	);
 
 	global.createMixing(
-		['10x &minecraft:water', '5x minecraft:sand', '100x &create:honey'],
+		['10x &minecraft:water', '25% 5x minecraft:sand', '100x &create:honey'],
 		['&#forge:milk', '9x minecraft:charcoal'],
 		'rjs_lib:mixing/some_trash'
 	);
@@ -27,7 +27,7 @@ onEvent('recipes', e => {
 
 	global.createCutting(
 		['100% 10x minecraft:stone', '50% 5x minecraft:sand', 'minecraft:dirt'],
-		'minecraft:dirt',
+		'#minecraft:dirt',
 		'rjs_lib:cutting/some_trash'
 	);
 
@@ -69,7 +69,7 @@ onEvent('recipes', e => {
 	);
 
 	global.createDeploying(
-		'minecraft:grass_block',
+		'99% minecraft:grass_block',
 		['minecraft:dirt', 'minecraft:tall_grass'],
 		'rjs_lib:deploying/some_trash2',
 		true
@@ -92,5 +92,17 @@ onEvent('recipes', e => {
 		'create:crushing_wheel',
 		'rjs_lib:crushing/some_trash',
 		1000
+	);
+
+	global.createPressing(
+		['10% minecraft:egg', '2x minecraft:feather'],
+		'minecraft:chicken_spawn_egg',
+		'rjs_lib:pressing/some_trash'
+	);
+
+	global.createSandpaperPolishing(
+		'1% create:refined_radiance',
+		'minecraft:nether_star',
+		'rjs_lib:sandpaper_polishing/some_trash'
 	);
 });
