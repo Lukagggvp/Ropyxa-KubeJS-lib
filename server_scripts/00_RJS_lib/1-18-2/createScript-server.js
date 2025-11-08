@@ -1,6 +1,7 @@
-//version 0.5-1.18.2-server
+//version 0.6-1.18.2-server
 //---changelog---
-//added haunting, splashing, milling, crushing
+//added itemApplication, pressing, added chance support to Compacting, Mixing, Deploying
+
 global.createCompacting = function(output, input, id, heat, e) {
 	e = global.TrueEvent;
 
@@ -8,7 +9,7 @@ global.createCompacting = function(output, input, id, heat, e) {
 		type: 'create:compacting',
 		heatRequirement: heat || 'none',
 		ingredients: global.ISarrayInput_many_fluid_tag(input),
-		results: global.ISarrayOutput_many_fluid(output)
+		results: global.ISarrayOutput_many_chance_fluid(output)
 	}).id(id);
 };
 
@@ -19,7 +20,7 @@ global.createMixing = function(output, input, id, heat, e) {
 		type: 'create:mixing',
 		heatRequirement: heat || 'none',
 		ingredients: global.ISarrayInput_many_fluid_tag(input),
-		results: global.ISarrayOutput_many_fluid(output)
+		results: global.ISarrayOutput_many_chance_fluid(output)
 	}).id(id);
 };
 
@@ -61,7 +62,7 @@ global.createDeploying = function(output, input, id, keep_item, e) {
 		type: 'create:deploying',
 		ingredients: global.ISarrayInput_many_tag(input),
 		keepHeldItem: keep_item || false,
-		results: global.ISarrayOutput_many(output)
+		results: global.ISarrayOutput_many_chance(output)
 	}).id(id);
 };
 
@@ -102,6 +103,36 @@ global.createCrushing = function(output, input, id, time, e) {
 		type: 'create:crushing',
 		ingredients: global.ISarrayInput_many_tag(input),
 		processingTime: time || 100,
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createItemApplication = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:item_application',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createPressing = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:pressing',
+		ingredients: global.ISarrayInput_many_tag(input),
+		results: global.ISarrayOutput_many_chance(output)
+	}).id(id);
+};
+
+global.createSandpaperPolishing = function(output, input, id, e) {
+	e = global.TrueEvent;
+
+	e.custom({
+		type: 'create:sandpaper_polishing',
+		ingredients: global.ISarrayInput_many_tag(input),
 		results: global.ISarrayOutput_many_chance(output)
 	}).id(id);
 };
