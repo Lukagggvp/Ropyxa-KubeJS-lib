@@ -207,3 +207,71 @@ global.ISarrayOutput_many_chance = function(input) {
 
 	return out;
 };
+
+global.ISarrayOutput_many_chance_fluid = function(input) {
+	var src = Array.isArray(input) ? input : [input];
+	var out = [];
+
+	for (var k = 0; k < src.length; k++) {
+		var raw = src[k];
+
+		if (raw && typeof raw === 'object') {
+			var chance = raw.chance != null ? raw.chance : null;
+
+			if (raw.fluid) {
+				var amt = raw.amount != null ? raw.amount : 1;
+				var objF = {
+					fluid: String(raw.fluid),
+					amount: amt
+				};
+				if (chance != null) objF.chance = chance;
+				out.push(objF);
+			} else if (raw.item) {
+				var cnt = raw.count != null ? raw.count : 1;
+				var objI = {
+					item: String(raw.item),
+					count: cnt
+				};
+				if (chance != null) objI.chance = chance;
+				out.push(objI);
+			}
+			continue;
+		}
+
+		var entry = String(raw).trim();
+		var rest = entry;
+		var chance = null;
+		var mult = 1;
+
+		var chanceMatch = /(^|\s)(\d+(?:\.\d+)?)\s*%(\s|$)/.exec(rest);
+		if (chanceMatch) {
+			chance = parseFloat(chanceMatch[2]) / 100;
+			rest = (rest.slice(0, chanceMatch.index) + rest.slice(chanceMatch.index + chanceMatch[0].length)).trim();
+		}
+
+		var countMatch = /(^|\s)(\d+)\s*[xх](\s|$)/.exec(rest);
+		if (countMatch) {
+			mult = parseInt(countMatch[2], 10);
+			rest = (rest.slice(0, countMatch.index) + rest.slice(countMatch.index + countMatch[0].length)).trim();
+		}
+
+		if (/^&/.test(rest)) {
+			var fluidId = rest.substring(1).trim();
+			var objF = {
+				fluid: fluidId,
+				amount: mult
+			};
+			if (chance !== null) objF.chance = chance;
+			out.push(objF);
+		} else {
+			var objI = {
+				item: rest
+			};
+			if (mult !== 1) objI.count = mult;
+			if (chance !== null) objI.chance = chance;
+			out.push(objI);
+		}
+	}
+
+	return out;
+};
